@@ -124,6 +124,39 @@
     animation: fadeUp 0.8s ease 0.35s both;
   }
 
+  /* ─── Hero book image ─── */
+  .hero-image {
+    margin-top: 48px;
+    animation: fadeUp 0.9s ease 0.4s both;
+    position: relative;
+  }
+
+  .hero-image::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translateX(-50%);
+    width: 62%;
+    height: 28px;
+    background: radial-gradient(ellipse at center, rgba(28,24,16,0.18) 0%, transparent 72%);
+    filter: blur(2px);
+    z-index: 0;
+  }
+
+  .hero-book-img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: clamp(220px, 42vw, 380px);
+    height: auto;
+    border-radius: 3px;
+    box-shadow:
+      0 40px 70px -28px rgba(28,24,16,0.38),
+      0 10px 24px rgba(28,24,16,0.16),
+      0 0 0 1px rgba(201,168,76,0.18);
+  }
+
   .hero-cta {
     margin-top: 52px;
     display: flex;
@@ -495,6 +528,17 @@
     letter-spacing: 0.4em;
     margin: 0 auto 28px;
   }
+
+  /* ─── Hero image responsive tuning ─── */
+  @media (max-width: 640px) {
+    .hero-image { margin-top: 36px; }
+    .hero-book-img { width: clamp(200px, 62vw, 280px); }
+    .hero-image::after { bottom: -14px; height: 20px; }
+  }
+
+  @media (min-width: 1440px) {
+    .hero-book-img { width: 400px; }
+  }
 </style>
 </head>
 <body>
@@ -503,11 +547,14 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">New Release · Available on Amazon</div>
+  <div class="hero-badge"> · Available on Amazon · </div>
   <h1 class="hero-title">The Master<br><em>Manifester</em></h1>
   <div class="hero-divider"></div>
   <p class="hero-sub">The Mastery Blueprint for Manifesting Anything Like a Pro</p>
   <p class="hero-author">by Awuraama Dadson</p>
+  <div class="hero-image reveal">
+    <img src="asset/book-cover.png" alt="The Master Manifester book by Awuraama Dadson, styled on a desk with journals and orchids" class="hero-book-img">
+  </div>
  <div class="reveal">
     <a href="https://www.amazon.com/dp/B0GZ5DH171" class="btn-gold">Get the Book →</a>
   </div>
@@ -538,7 +585,7 @@
     <div class="pillar">
       <div class="pillar-num">01</div>
       <div class="pillar-title">The Biggest Mistakes</div>
-      <p class="pillar-text">Why most people's manifesting attempts stall — and the simple shifts that break the cycle for good.</p>
+      <p class="pillar-text">Why most people's manifesting attempts stall and the simple shifts that break the cycle for good.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num">02</div>
@@ -578,10 +625,10 @@
       The next came the doubt — <em>"Am I just being delusional?"</em>
     </p>
     <p class="journey-body">
-      If you've felt that emotional rollercoaster, you're not alone. Awuraama spent six years navigating the breakthroughs and the confusion, the spiritual and the practical — until it all clicked into place.
+      If you've felt that emotional rollercoaster, you're not alone. Awuraama spent six years navigating the breakthroughs and the confusion, the spiritual and the practical until it all clicked into place.
     </p>
     <p class="journey-body">
-      This book is her honest account of that journey — and the complete blueprint that came out the other side.
+      This book is her honest account of that journey and the complete blueprint that came out the other side.
     </p>
   </div>
 
