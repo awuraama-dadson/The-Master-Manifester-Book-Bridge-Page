@@ -4,7 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Master Manifester — Awuraama Dadson</title>
+<meta name="description" content="Official author website of Awuraama Dadson, author of The Master Manifester — The Mastery Blueprint for Manifesting Anything Like a Pro.">
+<meta name="author" content="Awuraama Dadson">
+<meta property="og:type" content="book">
+<meta property="og:title" content="The Master Manifester — Awuraama Dadson">
+<meta property="og:description" content="Official author website of Awuraama Dadson, author of The Master Manifester.">
+<meta property="og:image" content="asset/book-cover.png">
 <link rel="icon" type="image/jpg" href="asset/1.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Awuraama Dadson",
+      "jobTitle": "Author",
+      "url": "https://www.awuraamadadson.com/",
+      "description": "Writer, engineer, and manifestation and personal development coach. Author of The Master Manifester.",
+      "sameAs": [
+        "https://www.amazon.com/dp/B0GZ5DH171",
+        "INSERT_YOUTUBE_LINK",
+        "INSERT_INSTAGRAM_LINK",
+        "INSERT_TIKTOK_LINK",
+        "INSERT_GOODREADS_LINK"
+      ]
+    },
+    {
+      "@type": "Book",
+      "name": "The Master Manifester",
+      "author": { "@type": "Person", "name": "Awuraama Dadson" },
+      "url": "https://www.amazon.com/dp/B0GZ5DH171",
+      "description": "The Mastery Blueprint for Manifesting Anything Like a Pro."
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,6 +75,57 @@
     background: linear-gradient(90deg, var(--charcoal), var(--gold), var(--charcoal));
   }
 
+  /* ─── Site nav ─── */
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 40px;
+    background: var(--ivory);
+  }
+
+  .site-nav .nav-mark {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-style: italic;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .site-nav .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .site-nav .nav-links a {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brown);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .site-nav .nav-links a:hover { color: var(--gold); }
+
+  @media (max-width: 560px) {
+    .site-nav { padding: 18px 20px; }
+    .site-nav .nav-links { gap: 18px; 
+      font-size: 0.1px;
+     }
+     .site-nav .nav-links a {
+    font-size: 6.2px;
+  }
+   .site-nav .nav-mark {
+    font-size: 13.5px;
+  }
+     
+  }
+
   /* ─── Hero ─── */
   .hero {
     min-height: 100vh;
@@ -46,7 +133,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: relative; 
     padding: 80px 24px 60px;
     background: var(--ivory);
     overflow: hidden;
@@ -387,46 +474,232 @@
     line-height: 1.7;
   }
 
-  /* ─── Author section ─── */
-  .author-section {
-    padding: 100px 24px;
-    max-width: 820px;
+  /* ─── About the Author (upgraded, prominent band) ─── */
+  .about-section {
+    background: var(--charcoal);
+    color: var(--ivory);
+    padding: 120px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 55% 45% at 15% 15%, rgba(201,168,76,0.10) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .about-inner {
+    max-width: 980px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+  }
+
+  @media (max-width: 720px) {
+    .about-inner { grid-template-columns: 1fr; text-align: center; gap: 36px; }
+    .about-visual { justify-self: center; }
+  }
+
+  .about-visual {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 28px;
+    gap: 18px;
   }
 
   .author-monogram {
-    width: 88px;
-    height: 88px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    background: var(--charcoal);
+    background-image: url('asset/portrait.png');
+    border: 1px solid var(--gold);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--serif);
-    font-size: 2rem;
+    font-size: 2.6rem;
     font-weight: 300;
-    color: var(--gold-light);
     flex-shrink: 0;
   }
 
+  .about-signature {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--gold-light);
+    letter-spacing: 0.02em;
+  }
+
+  .about-content .section-label { color: var(--gold); }
+
   .author-title {
     font-family: var(--serif);
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 300;
-    color: var(--charcoal);
+    color: var(--ivory);
+    margin-bottom: 14px;
+  }
+
+  .about-credentials {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 24px;
   }
 
   .author-bio {
     font-size: 15px;
-    color: var(--muted);
+    color: rgba(253,250,243,0.72);
     line-height: 1.8;
     max-width: 600px;
+    margin-bottom: 22px;
   }
+
+  .about-verify {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(253,250,243,0.55);
+    border-top: 1px solid rgba(201,168,76,0.25);
+    padding-top: 18px;
+    max-width: 600px;
+  }
+
+  /* ─── Contact section ─── */
+  .contact-section {
+    background: var(--cream);
+    padding: 100px 24px;
+  }
+
+  .contact-inner {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-intro {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--brown);
+    margin-bottom: 44px;
+  }
+
+  .contact-form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-row label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brown);
+  }
+
+  .form-row input,
+  .form-row textarea {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--charcoal);
+    background: var(--ivory);
+    border: 1px solid var(--gold-light);
+    border-radius: 2px;
+    padding: 14px 16px;
+    resize: vertical;
+  }
+
+  .form-row input:focus,
+  .form-row textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  .contact-form .btn-gold {
+    align-self: center;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ─── Footer ─── */
+  footer {
+    background: var(--charcoal);
+    padding: 64px 24px 36px;
+    text-align: center;
+  }
+
+  .footer-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .footer-official {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+
+  .footer-social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 50%;
+    color: var(--gold-light);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .footer-social a:hover {
+    background: rgba(201,168,76,0.15);
+    border-color: var(--gold);
+  }
+
+  .footer-social svg { width: 16px; height: 16px; fill: currentColor; }
+
+  .footer-meta {
+    font-size: 12px;
+    color: rgba(253,250,243,0.5);
+    letter-spacing: 0.06em;
+    line-height: 1.8;
+  }
+
+  .footer-meta a {
+    color: var(--gold-light);
+    text-decoration: none;
+  }
+
+  .footer-meta a:hover { text-decoration: underline; }
 
   /* ─── Final CTA ─── */
   .final-cta {
@@ -491,16 +764,6 @@
     transform: translateY(-2px);
   }
 
-  /* ─── Footer ─── */
-  footer {
-    padding: 32px 24px;
-    text-align: center;
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    border-top: 1px solid rgba(201,168,76,0.15);
-  }
-
   /* ─── Animations ─── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -544,6 +807,15 @@
 <body>
 
 <div class="top-bar"></div>
+
+<nav class="site-nav">
+  <a href="#" class="nav-mark">Awuraama Dadson</a>
+  <ul class="nav-links">
+    <li><a href="#about">About the Author</a></li>
+    <li><a href="#get-book">The Book</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -646,13 +918,33 @@
   </div>
 </section>
 
-<!-- AUTHOR -->
-<section class="author-section reveal">
-  <div class="author-monogram">AD</div>
-  <h2 class="author-title">Awuraama Dadson</h2>
-  <p class="author-bio">
-    Awuraama is a writer, an engineer and a manifestation and personal development coach whose own six-year journey into manifestation, faith, and the Law of Assumption led to the breakthroughs she shares in this book. Her work weaves together personal experience, biblical insight, and practical wisdom. Helping readers discover that the power to shape their reality has been within them all along.
-  </p>
+<!-- ABOUT THE AUTHOR -->
+<section class="about-section reveal" id="about">
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="author-monogram"></div>
+      <p class="about-signature">Awuraama Dadson</p>
+    </div>
+    <div class="about-content">
+      <p class="section-label">The Author</p>
+      <h2 class="author-title">Meet Awuraama Dadson</h2>
+      <p class="about-credentials">Author of <em>The Master Manifester</em> · Digital Product Enterpreneur · Software &amp; Chemical Engineer · Manifestation &amp; Personal Development Content Creator</p>
+      <p class="author-bio">
+        I’m Awuraama Dadson, an author, creator, and lifelong student of growth, mindset, and intentional living.
+
+I’m fascinated by the journey of becoming—the process of transforming who we are, challenging the beliefs that limit us, and building a life that feels aligned with who we truly desire to be.
+
+My work sits at the intersection of personal development, faith, self-concept, creativity, and the pursuit of a meaningful life. I love exploring ideas around mindset, manifestation, abundance, and the power of belief, while also sharing the lessons I’ve learned along my own journey of growth.
+
+Beyond writing, I’m passionate about creating things that inspire transformation—from digital products and businesses to content that encourages people to think differently about their potential. I’m also constantly learning, exploring technology, and expanding my understanding of how creativity and innovation can be used to build a better future.
+
+My first book, *The Master Manifester*, is a reflection of my six-year exploration into manifestation, belief, faith, and the deeper principles behind creating change from within.
+
+Through my writing and creative work, my hope is to encourage others to embrace their own becoming journey; to grow, believe bigger, and intentionally create a life they are proud of.
+
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- FINAL CTA -->
@@ -665,8 +957,52 @@
   </div>
 </section>
 
+
+<section class="contact-section reveal" id="contact">
+  <div class="contact-inner">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">I'd Love to Hear From You</h2>
+    <p class="contact-intro">For collaborations, questions, or reader messages — get in touch.</p>
+    <form class="contact-form" action="mailto:INSERT_YOUR_EMAIL_HERE" method="POST" enctype="text/plain">
+      <div class="form-row">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="Name" required>
+      </div>
+      <div class="form-row">
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="Email" required>
+      </div>
+      <div class="form-row">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="Message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn-gold">Send Message →</button>
+    </form>
+  </div>
+</section>
+
 <footer>
-  <p>© 2025 Awuraama Dadson · <em>The Master Manifester</em></p>
+  <div class="footer-inner">
+    <p class="footer-official">This is the official website of Awuraama Dadson, author of <em>The Master Manifester</em>.</p>
+    <div class="footer-social">
+      <a href="https://www.youtube.com/@AwuraamaDadson" aria-label="YouTube" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5l6.3 3.5-6.3 3.5Z"/></svg>
+      </a>
+      <a href="https://linktr.ee/awuraamadadson" aria-label="Instagram" target="_blank" rel="noopener">
+<i class="fa-solid fa-link"></i>
+      </a>
+      <a href="https://www.tiktok.com/@awuraama.dadson?_r=1&_t=ZS-98eu3fAG29R" aria-label="TikTok" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.6a2.9 2.9 0 1 1-2.06-2.78v-3.3a6.1 6.1 0 1 0 5.26 6.04V9.1a7.9 7.9 0 0 0 4.6 1.48V7.36a4.6 4.6 0 0 1-4.6-4.6V2Z"/></svg>
+      </a>
+      <a href="https://www.goodreads.com/user/show/203275454-awuraama-dadson" aria-label="Goodreads" target="_blank" rel="noopener">
+    <i class="fa-brands fa-goodreads-g"></i>
+      </a>
+    </div>
+    <p class="footer-meta">
+      © 2025 Awuraama Dadson · Author of <em>The Master Manifester</em><br>
+      <a href="mailto:INSERT_YOUR_EMAIL_HERE">awuraama12dadson@gmail.com</a>
+    </p>
+  </div>
 </footer>
 
 <script>
