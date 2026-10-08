@@ -264,6 +264,122 @@
     transform: translateY(-2px);
   }
 
+  /* ─── Ghana orders (direct from the author) ─── */
+  .ghana-order {
+    margin-top: 56px;
+    border: 1px solid var(--gold-light);
+    background: var(--ivory);
+    padding: 56px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ghana-order::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .ghana-order > * { position: relative; }
+
+  .ghana-order .options-badge { margin-bottom: 22px; }
+
+  .ghana-order .format-icon { margin: 0 auto 22px; }
+
+  .ghana-order .format-title {
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-weight: 400;
+  }
+
+  .ghana-order .options-sub { margin-bottom: 22px; }
+
+  .ghana-price {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--brown);
+    margin-bottom: 18px;
+  }
+
+  .ghana-price strong { font-weight: 600; color: var(--charcoal); }
+
+  .ghana-order .format-text {
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  .ghana-order .btn-gold { padding: 18px 44px; }
+
+  .ghana-how {
+    margin: 44px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid var(--gold-light);
+    max-width: 640px;
+  }
+
+  .ghana-how-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .ghana-steps {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    counter-reset: step;
+  }
+
+  .ghana-steps li {
+    counter-increment: step;
+    flex: 1;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .ghana-steps li::before {
+    content: counter(step);
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .ghana-note {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 28px auto 0;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 560px) {
+    .ghana-order { padding: 44px 20px; margin-top: 40px; }
+    .ghana-order .btn-gold {
+      display: block;
+      padding: 17px 20px;
+      letter-spacing: 0.12em;
+    }
+    .ghana-steps {
+      flex-direction: column;
+      gap: 20px;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+  }
+
   /* ─── Footer ─── */
   footer {
     background: var(--charcoal);
@@ -363,7 +479,7 @@
       <div class="format-icon"><i class="fa-solid fa-file-pdf"></i></div>
       <h2 class="format-title">Digital Edition</h2>
       <p class="format-text">Instant download — read on any device, right after purchase.</p>
-      <p class="format-text">GHS 150</p>
+      <p class="format-text">GHS 120</p>
       <a href="https://selar.com/0r71v1qn00" class="btn-gold" target="_blank" rel="noopener">Get on Selar →</a>
     </div>
 
@@ -392,6 +508,33 @@
       <a href="https://www.amazon.com/Master-Manifester-Blueprint-Manifesting-Anything/dp/B0GZ5Z9FQ3/ref=tmm_hrd_swatch_0" class="btn-gold" target="_blank" rel="noopener">Get on Amazon →</a>
     </div>
 
+  </div>
+
+  <!-- GHANA ORDERS — physical copies direct from the author via WhatsApp -->
+  <div class="ghana-order reveal" id="ghana">
+    <div class="options-badge">🇬🇭 Ghana Orders</div>
+    <div class="format-icon"><i class="fa-solid fa-book-open"></i></div>
+    <h2 class="format-title">In Ghana?</h2>
+    <p class="options-sub">Get your physical copy directly from the author.</p>
+    <p class="ghana-price">Paperback · <strong>GHS 150</strong></p>
+    <p class="format-text">Skip Amazon's international shipping costs and order your copy directly from me for delivery within Ghana.</p>
+
+    <!--
+      WHATSAPP NUMBER — replace YOUR_WHATSAPP_NUMBER below with your number:
+      country code + number, digits only, no "+", no spaces, no leading 0.
+      Example: 0241234567 becomes 233241234567
+    -->
+    <a href="https://wa.me/233557449392?text=Hi%20Awuraama%21%20I%27d%20like%20to%20order%20a%20hardcopy%20of%20The%20Master%20Manifester%20in%20Ghana." class="btn-gold" target="_blank" rel="noopener">Order a Hardcopy in Ghana →</a>
+
+    <div class="ghana-how">
+      <p class="ghana-how-label">How it works</p>
+      <ol class="ghana-steps">
+        <li>Message me on WhatsApp</li>
+        <li>Confirm your delivery details</li>
+        <li>Make full payment</li>
+      </ol>
+      <p class="ghana-note">Books ship to Ghana and take about two months to arrive, so there's a short wait before your copy reaches you.</p>
+    </div>
   </div>
 
   <div class="back-link-wrap reveal">
