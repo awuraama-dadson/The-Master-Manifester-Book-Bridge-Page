@@ -574,79 +574,195 @@
     max-width: 600px;
   }
 
-  /* ─── Testimonials ─── */
+  /* ─── Reader Reviews ─── */
   .testimonials-section {
     background: var(--cream);
-    padding: 100px 24px;
+    padding: 110px 24px;
+    position: relative;
+    overflow: hidden;
   }
+
+  .testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: -180px; left: 50%;
+    width: 720px; height: 720px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(240,217,138,0.35) 0%, rgba(240,217,138,0) 65%);
+    pointer-events: none;
+  }
+
+  .testimonials-section > * { position: relative; }
 
   .testimonials-section .section-label,
   .testimonials-section .section-title {
     text-align: center;
   }
 
-  .testimonials-section .section-title {
-    margin-bottom: 64px;
-  }
-
-  .testimonials-grid {
-    max-width: 940px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-  }
-
-  .testimonial-card {
-    background: var(--ivory);
-    border: 1px solid var(--gold-light);
-    border-radius: 4px;
-    padding: 44px 38px;
-    text-align: left;
-  }
-
-  .testimonial-quote-mark {
-    display: block;
-    font-family: var(--serif);
-    font-size: 3.4rem;
-    font-weight: 400;
-    color: var(--gold-light);
-    line-height: 0.6;
-    margin-bottom: 18px;
-  }
-
-  .testimonial-text {
+  .reviews-intro {
     font-family: var(--serif);
     font-style: italic;
-    font-weight: 300;
-    font-size: 1.15rem;
-    color: var(--brown);
-    line-height: 1.75;
-    margin-bottom: 28px;
+    font-size: 1.1rem;
+    color: var(--muted);
+    text-align: center;
+    max-width: 520px;
+    margin: 14px auto 0;
+    line-height: 1.7;
   }
 
-  .testimonial-divider {
-    width: 36px;
-    height: 1px;
-    background: var(--gold);
-    margin-bottom: 18px;
-  }
-
-  .testimonial-author {
-    font-family: var(--sans);
-    font-size: 13px;
+  .reviews-stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 26px 0 64px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--charcoal);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--brown);
   }
 
-  .testimonial-role {
-    font-family: var(--sans);
+  .reviews-stars .stars { color: var(--gold); font-size: 14px; letter-spacing: 4px; }
+  .reviews-stars .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+
+  .reviews-wall {
+    max-width: 1080px;
+    margin: 0 auto;
+    columns: 3 300px;
+    column-gap: 28px;
+  }
+
+  .review-card {
+    break-inside: avoid;
+    margin: 0 0 28px;
+    background: var(--ivory);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 14px;
+    padding: 22px 22px 20px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset, 0 18px 40px -24px rgba(74,59,34,0.35);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    cursor: zoom-in;
+  }
+
+  .review-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset, 0 28px 50px -24px rgba(74,59,34,0.45);
+  }
+
+  .review-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .review-card-head .stars { color: var(--gold); font-size: 11px; letter-spacing: 3px; }
+
+  .review-card-head .tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .review-headline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .review-headline::before { content: '“'; color: var(--gold); margin-right: 2px; }
+  .review-headline::after  { content: '”'; color: var(--gold); margin-left: 2px; }
+
+  .review-shot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: #111;
+    box-shadow: 0 0 0 1px rgba(28,24,16,0.08);
+  }
+
+  .review-card-foot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-top: 4px;
+  }
+
+  .review-card-foot::before {
+    content: '';
+    width: 28px; height: 1px;
+    background: var(--gold);
+  }
+
+  .review-card.featured {
+    background: var(--charcoal);
+    border-color: rgba(201,168,76,0.5);
+  }
+
+  .review-card.featured .review-headline { color: var(--gold-light); font-size: 1.6rem; }
+  .review-card.featured .review-card-head .tag,
+  .review-card.featured .review-card-foot { color: rgba(253,250,243,0.6); }
+
+  /* Lightbox */
+  .review-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(28,24,16,0.88);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+  }
+
+  .review-lightbox.open { opacity: 1; visibility: visible; }
+
+  .review-lightbox img {
+    max-width: min(860px, 100%);
+    max-height: 86vh;
+    border-radius: 12px;
+    border: 1px solid rgba(201,168,76,0.5);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    transform: scale(0.96);
+    transition: transform 0.3s ease;
+  }
+
+  .review-lightbox.open img { transform: scale(1); }
+
+  .review-lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: none;
+    border: 1px solid rgba(201,168,76,0.6);
+    color: var(--gold-light);
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 480px) {
+    .testimonials-section { padding: 80px 16px; }
+    .reviews-stars { flex-wrap: wrap; gap: 10px; margin-bottom: 44px; }
+    .review-card { padding: 18px 16px 16px; }
   }
 
   /* ─── Review CTA ─── */
@@ -1082,43 +1198,78 @@ Through my writing and creative work, my hope is to encourage others to embrace 
 <section class="testimonials-section reveal" id="testimonials">
   <p class="section-label">Reader Love</p>
   <h2 class="section-title">What Readers Are Saying</h2>
+  <p class="reviews-intro">Real messages from real readers, shared exactly as they were sent.</p>
+  <div class="reviews-stars"><span class="stars">★★★★★</span><span class="dot"></span><span>Straight from the DMs</span></div>
 
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <span class="testimonial-quote-mark">"</span>
-      <p class="testimonial-text">Read just the introduction when I got the book because I was a little busy and I was hooked! Couldn't wait to continue reading</p>
-      <div class="testimonial-divider"></div>
-      <p class="testimonial-author">Edinam</p>
-      <p class="testimonial-role">Verified Reader</p>
-    </div>
+  <div class="reviews-wall">
+    <figure class="review-card featured">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Opened my mind</span></div>
+      <p class="review-headline">Absolutely loved your book!</p>
+      <img class="review-shot" src="asset/reviews/review-1.jpg" alt="Reader message: Absolutely loved your book!" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
 
-    <div class="testimonial-card">
-      <span class="testimonial-quote-mark">"</span>
-      <p class="testimonial-text">A very very captivating read.</p>
-      <div class="testimonial-divider"></div>
-      <p class="testimonial-author">Nana Ama</p>
-      <p class="testimonial-role">Verified Reader</p>
-    </div>
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Every question answered</span></div>
+      <p class="review-headline">As though the author knew exactly what you'd be thinking</p>
+      <img class="review-shot" src="asset/reviews/review-3.jpg" alt="Reader message: As though the author knew exactly what you'd be thinking" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
+
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Finished in full</span></div>
+      <p class="review-headline">Inspiring and full of good information</p>
+      <img class="review-shot" src="asset/reviews/review-8.jpg" alt="Reader message: Inspiring and full of good information" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
+
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Not a self-help fan</span></div>
+      <p class="review-headline">Wisdom in plain, girly lingua</p>
+      <img class="review-shot" src="asset/reviews/review-2.jpg" alt="Reader message: Wisdom in plain, girly lingua" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
+
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Put it to the test</span></div>
+      <p class="review-headline">Most of them worked</p>
+      <img class="review-shot" src="asset/reviews/review-6.jpg" alt="Reader message: Most of them worked" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
+
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Questions answered</span></div>
+      <p class="review-headline">By the time I was done reading, I found out</p>
+      <img class="review-shot" src="asset/reviews/review-5.jpg" alt="Reader message: By the time I was done reading, I found out" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
+
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Taking action</span></div>
+      <p class="review-headline">I'm inspired to change a couple of things</p>
+      <img class="review-shot" src="asset/reviews/review-7.jpg" alt="Reader message: I'm inspired to change a couple of things" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
+
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">A new outlook</span></div>
+      <p class="review-headline">Opened my eyes to a totally different perspective</p>
+      <img class="review-shot" src="asset/reviews/review-4.jpg" alt="Reader message: Opened my eyes to a totally different perspective" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
+
+    <figure class="review-card">
+      <div class="review-card-head"><span class="stars">★★★★★</span><span class="tag">Wants more</span></div>
+      <p class="review-headline">Hope to see more of your works soon</p>
+      <img class="review-shot" src="asset/reviews/review-9.jpg" alt="Reader message: Hope to see more of your works soon" loading="lazy">
+      <figcaption class="review-card-foot">Verified Reader</figcaption>
+    </figure>
   </div>
-   <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <span class="testimonial-quote-mark">"</span>
-      <p class="testimonial-text">The author? Gifted. Really insightful book. I love how she plays with words</p>
-      <div class="testimonial-divider"></div>
-      <p class="testimonial-author">Justy</p>
-      <p class="testimonial-role">Verified Reader</p>
-    </div>
 
-    <div class="testimonial-card">
-      <span class="testimonial-quote-mark">"</span>
-      <p class="testimonial-text">Easy to understand and it felt very personal. Enjoyed it a lot</p>
-      <div class="testimonial-divider"></div>
-      <p class="testimonial-author">Eli</p>
-      <p class="testimonial-role">Verified Reader</p>
-    </div>
+  <div class="review-lightbox" id="reviewLightbox" aria-hidden="true">
+    <button class="review-lightbox-close" aria-label="Close">×</button>
+    <img src="" alt="">
   </div>
-
-
 
   <div class="review-cta">
     <p class="review-cta-label">Share Your Experience</p>
@@ -1191,6 +1342,22 @@ Through my writing and creative work, my hope is to encourage others to embrace 
 </footer>
 
 <script>
+  const lightbox = document.getElementById('reviewLightbox');
+  document.body.appendChild(lightbox);
+  const lightboxImg = lightbox.querySelector('img');
+  document.querySelectorAll('.review-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const shot = card.querySelector('.review-shot');
+      lightboxImg.src = shot.src;
+      lightboxImg.alt = shot.alt;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    });
+  });
+  const closeLightbox = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
