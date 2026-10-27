@@ -972,6 +972,105 @@
 
   .footer-meta a:hover { text-decoration: underline; }
 
+  /* ─── FAQ ─── */
+  .faq-section {
+    background: var(--ivory);
+    padding: 110px 24px;
+  }
+
+  .faq-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .faq-inner > .section-label,
+  .faq-inner > .section-title { text-align: center; }
+
+  .faq-list { border-top: 1px solid var(--gold-light); }
+
+  .faq-item { border-bottom: 1px solid var(--gold-light); }
+
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px 4px;
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--charcoal);
+    transition: color 0.2s;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-item summary::after {
+    content: '+';
+    flex-shrink: 0;
+    font-family: var(--sans);
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--gold);
+    transition: transform 0.25s;
+  }
+
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+
+  .faq-item summary:hover { color: var(--brown); }
+
+  .faq-answer {
+    padding: 0 4px 26px;
+    color: var(--brown);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .faq-answer p + p,
+  .faq-answer p + ul,
+  .faq-answer ul + p { margin-top: 12px; }
+
+  .faq-answer ul { padding-left: 20px; }
+
+  .faq-answer li + li { margin-top: 6px; }
+
+  .faq-answer strong { color: var(--charcoal); font-weight: 600; }
+
+  .faq-answer a { color: var(--brown); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+
+  .faq-answer a:hover { color: var(--gold); }
+
+  .faq-more {
+    margin-top: 56px;
+    text-align: center;
+  }
+
+  .faq-more-title {
+    font-family: var(--serif);
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+  }
+
+  .faq-more-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--brown);
+    margin-bottom: 28px;
+  }
+
+  .faq-more .btn-outline { padding: 14px 28px; font-size: 12px; }
+
+  @media (max-width: 480px) {
+    .faq-section { padding: 80px 16px; }
+    .faq-item summary { font-size: 1.15rem; padding: 18px 2px; }
+  }
+
   /* ─── Final CTA ─── */
   .final-cta {
     background: var(--charcoal);
@@ -1084,6 +1183,7 @@
   <ul class="nav-links">
     <li><a href="#about">About the Author</a></li>
     <li><a href="#get-book">The Book</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1317,6 +1417,150 @@ Through my writing and creative work, my hope is to encourage others to embrace 
       <a href="https://www.amazon.com/dp/B0GZ5DH171" class="btn-gold" target="_blank" rel="noopener">Leave a Review on Amazon →</a>
       <a href="https://selar.com/0r71v1qn00" class="btn-primary" target="_blank" rel="noopener">Leave a Review on Selar →</a>
       <a href="https://www.goodreads.com/book/show/251670205-the-master-manifester" class="btn-outline" target="_blank" rel="noopener">Rate &amp; Review on Goodreads →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section reveal" id="faq">
+  <div class="faq-inner">
+    <p class="section-label">Questions &amp; Answers</p>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+      <summary><span>What is <em>The Master Manifester</em> about?</span></summary>
+      <div class="faq-answer">
+        <p><em>The Master Manifester: The Mastery Blueprint for Manifesting Anything Like a Pro</em> is a guide to understanding and applying the principles of manifestation in your everyday life.</p>
+        <p>Drawing on the Law of Assumption, self-concept, faith in God, and practical exercises, this book explores how your assumptions about yourself and your life influence the way you think, feel, and act. It is designed to help you become more intentional about your inner world and the life you're creating.</p>
+        <p>Whether you're new to manifestation or have been practising for years, this book offers a framework to deepen your understanding and put what you learn into practice.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Is the book fiction or nonfiction?</span></summary>
+      <div class="faq-answer">
+        <p><em>The Master Manifester</em> is a nonfiction personal development book. It combines explanations, personal insights, biblical perspectives, and practical exercises to help you explore manifestation and apply its principles to your life. The book also begins with my personal story and journey, offering a glimpse into the experiences that shaped my understanding of manifestation.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>How much does the book cost?</span></summary>
+      <div class="faq-answer">
+        <p>The price depends on the format you choose and where you purchase it.</p>
+        <ul>
+          <li><strong>Kindle eBook:</strong> $9.99 on Amazon</li>
+          <li><strong>Paperback:</strong> $20 on Amazon</li>
+          <li><strong>Hardcover:</strong> $25 on Amazon</li>
+          <li><strong>Paperback orders in Ghana:</strong> GHS 150</li>
+          <li><strong>PDF edition:</strong> GHS 120 on Selar</li>
+        </ul>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Why are the prices different?</span></summary>
+      <div class="faq-answer">
+        <p>Each edition has different production and distribution costs.</p>
+        <p>Digital editions are generally less expensive to produce and distribute, while physical copies involve printing, materials, and shipping. Prices may also vary between retailers and countries.</p>
+        <p>You can choose the edition that best suits your preferences, budget, and reading style.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>What formats are available?</span></summary>
+      <div class="faq-answer">
+        <p><em>The Master Manifester</em> is available in the following formats:</p>
+        <ul>
+          <li><strong>Kindle eBook:</strong> A digital edition you can read using the Kindle app on a compatible phone, tablet, or computer, or on a Kindle e-reader.</li>
+          <li><strong>Paperback:</strong> A physical copy with a flexible cover, perfect for reading, highlighting, and keeping on your bookshelf.</li>
+          <li><strong>Hardcover:</strong> A physical edition with a more rigid cover for added durability.</li>
+          <li><strong>Paperback orders in Ghana:</strong> You can order a physical copy directly from me through the book website. This option allows you to avoid Amazon's international shipping fees, although the estimated waiting period is 2–3 months.</li>
+          <li><strong>PDF edition:</strong> Available through Selar. Once your purchase is complete, you can download the digital book file and read it on a compatible device.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Do I have to purchase from Amazon if I'm in Ghana?</span></summary>
+      <div class="faq-answer">
+        <p>Not at all! If you're in Ghana, you can order a paperback copy directly from me through the official book website. This allows you to purchase locally without paying Amazon's international shipping fees.</p>
+        <p>Please note that local hardcopy orders have an estimated waiting period of 2–3 months.</p>
+        <p>If you prefer to purchase through Amazon, you can also find the Amazon ordering options through the book website.</p>
+        <p><strong><a href="book-options.html">See all the ordering options</a> and choose the one that works best for you.</strong></p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>How long will it take for my book to arrive?</span></summary>
+      <div class="faq-answer">
+        <p>Delivery times depend on the format you purchase and your chosen ordering method.</p>
+        <ul>
+          <li><strong>Kindle eBook:</strong> Usually available shortly after your purchase is confirmed.</li>
+          <li><strong>PDF edition:</strong> Available to download through Selar after your purchase is completed.</li>
+          <li><strong>Paperback orders in Ghana:</strong> Please allow approximately 2–3 months for your copy to arrive.</li>
+          <li><strong>Amazon physical orders:</strong> Delivery times vary depending on your location, shipping method, and Amazon's estimated delivery date.</li>
+        </ul>
+        <p>For Amazon orders, you can check the estimated delivery date displayed during checkout before completing your purchase.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Who is this book for?</span></summary>
+      <div class="faq-answer">
+        <p>This book is for anyone interested in personal growth, manifestation, self-concept, and creating a more intentional life.</p>
+        <p>It's especially suited to readers who want to explore the Law of Assumption, understand their beliefs about themselves more deeply, and learn about manifestation from a perspective that also makes room for faith in God.</p>
+        <p>You don't need to be an expert in manifestation to get started. All you need is an open mind and a willingness to explore the ideas presented in the book.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Do I need prior knowledge of manifestation to read it?</span></summary>
+      <div class="faq-answer">
+        <p>Not at all! The book is suitable for beginners as well as those who already have experience with manifestation.</p>
+        <p>Whether you're just discovering concepts such as the Law of Assumption and self-concept or looking to deepen your existing understanding, you can work through the ideas at your own pace and revisit the exercises whenever you need to.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Does the book incorporate the Bible?</span></summary>
+      <div class="faq-answer">
+        <p>Yes! Faith in God and biblical insights are an important part of the book's approach.</p>
+        <p><em>The Master Manifester</em> explores manifestation alongside spiritual reflection and biblical perspectives, discussing concepts such as self-concept, assumptions, and abundance. It's written for readers who want to explore these ideas while making room for their relationship with God.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Is manifestation about pretending that problems don't exist?</span></summary>
+      <div class="faq-answer">
+        <p>Not at all. Manifestation doesn't have to mean denying your current circumstances or pretending that difficult things never happen.</p>
+        <p>The book encourages you to examine the assumptions and beliefs you hold about yourself and your possibilities, while becoming more intentional about your mindset and responses. You can acknowledge where you are right now while remaining open to the possibility of a different future.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Is this book suitable for beginners?</span></summary>
+      <div class="faq-answer">
+        <p>Absolutely! If you've come across terms such as <em>Law of Assumption</em>, <em>self-concept</em>, or <em>living in the end</em> and want to understand them better, this book is a great place to begin.</p>
+        <p>You can work through the concepts at your own pace and return to the practical exercises as you continue learning and developing your understanding.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Will reading this book guarantee that I manifest everything I want?</span></summary>
+      <div class="faq-answer">
+        <p>While the book provides insights, perspectives, and practical exercises to support your personal development and manifestation practice, individual experiences and outcomes will naturally vary.</p>
+        <p>The intention is to help you deepen your understanding of manifestation, become more conscious of your assumptions, and approach your life with greater intentionality. The book is a resource for learning and personal growth rather than a guarantee of specific outcomes.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Can I read the digital version on my phone?</span></summary>
+      <div class="faq-answer">
+        <p>Yes! Both the Kindle eBook and PDF edition can be read on compatible smartphones.</p>
+        <p>For the Kindle edition, simply use the Kindle app. For the PDF edition, download your file from Selar after purchasing and open it using a compatible PDF reader.</p>
+        <p>Choose the format that best fits how you prefer to read.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span>What if I have a problem with my order?</span></summary>
+      <div class="faq-answer">
+        <p>If you experience any issues with your purchase, please <a href="#contact">reach out to me</a>. I'll be happy to help direct you to the appropriate support.</p>
+        <p>For orders placed through Amazon, you can also contact Amazon customer support for assistance with payment, shipping, or order-related concerns.</p>
+      </div>
+    </details>
+    </div>
+    <div class="faq-more">
+      <h3 class="faq-more-title">More questions?</h3>
+      <p class="faq-more-text">Still have a question about <em>The Master Manifester</em>? I'd love to hear from you.</p>
+      <a href="#contact" class="btn-outline">Get in Touch →</a>
     </div>
   </div>
 </section>
