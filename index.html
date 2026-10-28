@@ -61,13 +61,18 @@
     --sans: 'Jost', sans-serif;
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    overscroll-behavior: none;
+  }
 
   body {
     background-color: var(--ivory);
     color: var(--charcoal);
     font-family: var(--sans);
     overflow-x: hidden;
+    overscroll-behavior: none;
     line-height: 1.6;
   }
 
